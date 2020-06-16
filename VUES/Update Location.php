@@ -1,0 +1,123 @@
+
+<?php
+
+include_once("SRC/louer.class.php");
+
+$updatedata=new DB_con();
+if(isset($_POST['update']))
+{
+$id_ville=$_POST['id_ville'];
+$matricule=$_POST['matricule'];
+$date_debut=$_POST['date_debut'];
+$date_fin=$_POST['date_fin'];
+$montant_caution=$_POST['montant_caution'];
+$prix=$_POST['prix'];
+
+$sql=$updatedata->update($matricule,$date_debut,$date_fin,$montant_caution,$prix,$id_ville);
+
+echo "<script>alert('Mise a jour avec succés');</script>";
+
+echo "<script>window.location.href='menu louer.php'</script>";
+}
+?>
+<html>
+<head>
+
+<title>Mise à Jour Location</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<h1 class ="text-center shadow p-3 mb-5 bg-white rounded" >Mettre à jour une Location</h1>
+<p class="text-center" Style ="color:red"> Entrer l'ID la location à mettre à jour d'abord !</p>
+
+<form  method="post" name="insert" action="" class="text-center shadow p-3 mb-5 bg-white rounded">
+  
+  <div class="form-group">
+ 
+       
+        <label> ID </label>
+        <div>
+          <input type="text" name="id_ville">
+        </div>
+		
+		
+        <label> MATRICULE </label>
+        <div>
+          <input type="text" name="matricule">
+        </div>
+     
+      
+        <label > DATE DEBUT </label>
+        <div>
+          <input type="date" name="date_debut">
+        </div>
+		
+		
+		<label > DATE FIN </label>
+        <div>
+          <input type="date" name="date_fin">
+        </div>
+		
+		
+		<label > MONTANT CAUTION </label>
+        <div>
+          <input type="text" name="montant_caution">
+        </div>
+		
+		<label > PRIX EN CFA </label>
+        <div>
+          <input type="text" name="prix">
+        </div>
+      <p>
+	  </p>
+      
+   
+            <button type="submit" name="update"  class="btn btn-success">
+              Mettre à jour
+            </button>
+		
+     </div>
+     
+   
+ 
+</form>
+<table class="table table-bordered table-hover table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th width="20"></th>
+            <th>ID VILLE</th>
+			<th>MATRICULE</th>
+            <th>DATE DEBUT</th>
+            <th>DATE FIN</th>
+			<th>MONTANT CAUTION</th>
+			<th>PRIX</th>
+        </tr>
+    </thead>
+    <tbody id="tb">
+        <?php
+		include_once("SRC/connexion.php");
+        $result= $db->query("SELECT * FROM louer where 1 ");
+        if($result->num_rows>0){
+            while($val  =   $result->fetch_assoc()){  ?>
+            <tr>
+                <td align="center"><i class="fa fa-fw fa-arrows-alt"></i></td>
+                <td><?php echo $val['id_ville']; ?></td>
+                <td><?php echo $val['matricule']; ?></td>
+                <td><?php echo $val['date_debut']; ?></td>
+                <td><?php echo $val['date_fin']; ?></td>
+				 <td><?php echo $val['montant_caution']; ?></td>
+				  <td><?php echo $val['prix']; ?></td>
+            </tr>
+            <?php
+            }
+        }else{ ?>
+        <tr>
+            <td colspan="5" class="bg-light text-center"><strong>Pas d'enregistrement !</strong></td>
+        </tr>
+        <?php } ?>
+    </tbody>
+</table>
+
+
+</body>
+</html>
