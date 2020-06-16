@@ -10,7 +10,7 @@ Pour ne pas rencontrer des problémes avec mon programme merci de suivre les ins
 
 -Placer les fichiers sur le wamp server dans www ou sur xamp server dans htdocs
 
-4-Aprés avoir terminer toute les configurations lancer le programme :  Localhost/Gestionlocations
+4-Aprés avoir terminer toute les configurations lancer le programme :  Localhost/Locations
 
 Puis vous serez diriger vers le dossier parents ou se trouve toutes les formulaires !
 
