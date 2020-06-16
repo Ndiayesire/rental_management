@@ -1,23 +1,22 @@
 
 
-Pour ne pas rencontrer des problémes avec mon programme merci de suivre les instructions suivantes :
+Pour ne pas rencontrer des problÃ©mes avec mon programme merci de suivre les instructions suivantes :
 
 1-Ouvrir Phpmyadmin => Localhost/phpmyadmin
 
-2-Creer une nouvelle base de donnée nommez la comme suis "locations"
+2-Creer une nouvelle base de donnÃ©e nommez la comme suis "locations"
 
-3-Importer les tables à partir du fichier locations.sql qui se trouve dans le dossier 
+3-Importer les tables Ã  partir du fichier locations.sql qui se trouve dans le dossier 
 
 -Placer les fichiers sur le wamp server dans www ou sur xamp server dans htdocs
 
-4-Aprés avoir terminer toute les configurations lancer le programme :  Localhost/Gestionlocations
+4-AprÃ©s avoir terminer toute les configurations lancer le programme :  Localhost/Gestionlocations
 
 Puis vous serez diriger vers le dossier parents ou se trouve toutes les formulaires !
 
 Pour eviter de cliquer sur chaque formulaire, dans le Dossier Parent se trouve des menus :
 
-Cliquer sur le menu que vous voudrez par exemple le Menu Personne puis profiter des fonctionnalités ( AJOUTER, SUPPRIMER, UPDATE, LISTER )
+Cliquer sur le menu que vous voudrez par exemple le Menu Personne puis profiter des fonctionnalitÃ©s ( AJOUTER, SUPPRIMER, UPDATE, LISTER )
 
 Ainsi profiter de chaque table a partir des menus !!
 
-Merci Dr Sarr !
